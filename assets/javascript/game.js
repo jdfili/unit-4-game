@@ -5,7 +5,7 @@ $(document).ready(function () {
     var wins = 0;
     var losses = 0;
     var numberOptions = [10, 3, 5, 7];
-    targetNumber = 43;
+    var targetNumber = Math.floor(Math.random() * 50) + 30;
 
     for (var i = 0; i < numberOptions.length; i++) {
         var imageCrystal = $("<img>");
@@ -26,13 +26,18 @@ $(document).ready(function () {
             wins++;
             $("#wins").text("Wins: " + wins);
             counter = 0;
-            $(".user-number").text("Your score: " + counter)
+            $(".user-number").text("Your score: " + counter); 
+            targetNumber = Math.floor(Math.random() * 50) + 30;
+            $(".number-guess").text("Number to guess: " + targetNumber);   
         }
         else if (counter > targetNumber) {
             losses++;
             $("#losses").text("Losses: " + losses);
             counter = 0;
-            $(".user-number").text("Your score: " + counter)
+            $(".user-number").text("Your score: " + counter);
+            targetNumber = Math.floor(Math.random() * 50) + 30;
+            $(".number-guess").text("Number to guess: " + targetNumber);  
+           
         }
 
 

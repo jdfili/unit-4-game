@@ -3,7 +3,10 @@ $(document).ready(function () {
     var counter = 0;
     var wins = 0;
     var losses = 0;
-    var targetNumber = Math.floor(Math.random() * 30) + 30;
+
+    function newTargetNumber() {
+        targetNumber = Math.floor(Math.random() * 30) + 30;
+    };
 
     function images() {
         for (var i = 1; i < 5; i++) {
@@ -26,15 +29,15 @@ $(document).ready(function () {
 
     function reset() {
         counter = 0;
-        targetNumber = Math.floor(Math.random() * 30) + 30;
+        newTargetNumber()
         html();
         images();
-        
+
     }
     // ------------------------------------------------------------------------
+    newTargetNumber();
     html();
     images();
-    
 
     $("#crystals").on("click", "img", function () {
         var crystalValue = ($(this).attr("data-crystalvalue"));
@@ -53,13 +56,4 @@ $(document).ready(function () {
             reset();
         }
     })
-
-
-
-
-
-
-
-
-
 })

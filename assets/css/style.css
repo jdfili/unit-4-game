@@ -13,6 +13,7 @@ img {
 img:hover {
     transform: scale(1.1); 
     box-shadow: 5px 10px 8px #888888;
+    cursor: pointer;
 }
 h1 {
     border: 1px solid silver;

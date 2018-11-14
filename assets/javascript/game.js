@@ -5,7 +5,7 @@ $(document).ready(function () {
     var losses = 0;
 
     function newTargetNumber() {
-        targetNumber = Math.floor(Math.random() * 30) + 30;
+        targetNumber = Math.floor(Math.random() * 120) + 19;
     };
 
     function images() {
@@ -13,13 +13,13 @@ $(document).ready(function () {
             var imageCrystal = $("<img>");
             imageCrystal.addClass("crystal-image");
             imageCrystal.attr("src", "assets/images/mirage crystal--010.jpg");
-            imageCrystal.attr("data-crystalvalue", Math.floor(Math.random() * 9) + 2);
+            imageCrystal.attr("data-crystalvalue", Math.floor(Math.random() * 12) + 1);
             $("#crystals").append(imageCrystal);
         }
     };
 
     function html() {
-        $(".number-guess").text("Number to guess: " + targetNumber);
+        $(".score-guess").text("Score to guess: " + targetNumber);
         $(".user-number").text("Your score: " + counter);
         $("#wins").text("Wins: " + wins);
         $(".losses").text("Losses: " + losses);

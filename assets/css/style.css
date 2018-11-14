@@ -1,7 +1,27 @@
+body {
+    background: rgb(34, 33, 33);
+}
+
 img {
     height: 200px;
     width: 200px;
     margin: 10px;
-    border: 1px solid rgb(212, 212, 212);
+}
+
+h1 {
+    border: 1px solid silver;
+    padding: 10px;
+    background: rgb(34, 33, 33);
+    color: rgb(233,236,239);
+    
+}
+
+h2{
+    color: rgb(34, 33, 33);
+}
+
+.jumbotron {
+    border: 2px solid silver;
+    border-radius: 10%;
 }
 
